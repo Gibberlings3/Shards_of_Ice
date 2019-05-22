@@ -1,0 +1,29 @@
+@0    = ~Il Prezzo dell’Amicizia~
+@1    = ~Alcuni dei Miei Migliori Amici sono Fanghiglie~
+@2    = ~Fanghiglia Umorale~
+@3    = ~Kjobo Pansyflake~
+@4    = ~Heinonny~
+@5    = ~Statuetta della Fanghiglia~
+@6    = ~Questa statuetta dalla forma strana ha una superficie misteriosamente umida e può essere utilizzata per evocare la leggendaria Fanghiglia Umorale. Contrariamente ai suoi parenti più malvagi, le Fanghiglie Umorali sono pacifiche. Sono molto ricercate per le loro leggendarie qualità afrodisiache. Si dice che il semplice contatto con una di questa fanghiglie provochi intensi piaceri fisici.
+
+STATISTICHE:
+
+Abilità attivabili:
+- Evocare Fanghiglia Umorale una volta al giorno
+  Non è consigliabile evocarne più di una, in quanto la maggior parte degli umanoidi non riuscirebbe a gestire il sovraccarico di piacere sensoriale provocato da più di una Fanghiglia Umorale
+  
+Peso: 1~
+@7    = ~Ripristina l'Incantesimo Evocare Mucca~
+@8    = ~Evocare Mucca~
+@9    = ~Evocare Mucca
+(Attrazione)
+Livello: 5
+Raggio d'azione: Visuale del lanciatore
+Durata: Istantanea
+Tempo di lancio: 5
+Area d'effetto: 1 creatura
+Tiro-salvezza: Nessuno
+
+Questo incantesimo evoca un bovino che cade dal cielo e atterra sul bersaglio scelto dal lanciatore. Sfortunatamente, la magia in questione non può essere usata per combattere la fame, poiché la creatura evocata sparirà non appena avrà toccato il suolo.~
+@10   = ~I Gingilli di Lucy~
+

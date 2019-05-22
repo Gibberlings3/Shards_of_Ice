@@ -1,0 +1,23 @@
+@0    = ~The Price Of Friendship~
+@1    = ~Some of My Best Friends Are Slimes~
+@2    = ~Mood Slime~
+@3    = ~Kjobo Pansyflake~
+@4    = ~Heinonny~
+@5    = ~Slime Summoning Figurine~
+@6    = ~This oddly-shaped figurine with a mysteriously slimy surface can be used to summon the legendary Mood Slime.  Unlike their more nefarious cousins, Mood Slimes are peaceful.  They are highly sought due to their legendary quality as an aphrodisiac.  Simply coming into contact with one is said to cause intense physical pleasure.
+
+STATISTICS:
+
+Summons one mood slime a day.  Summoning more than one is not advised, as most humanoids cannot handle the sensory overload.~
+@7    = ~You Could Restore the Summon Cow Spell, But Why?~
+@8    = ~Summon Cow~
+@9    = ~Summon Cow (Summoning)
+Level: 5
+Range: Visual range of the caster
+Duration: Instant
+Casting Time: 5
+Area of Effect: 1 Creature
+Saving Throw: None
+
+This spell will summon a single bovine creature to fall from the sky and land on the target of the caster's choosing.  Unfortunately, this spell can not be used as a means of fighting famine, as the summoned creature will disappear once it has touched the ground.~
+@10   = ~Lucy's Knick Knacks~

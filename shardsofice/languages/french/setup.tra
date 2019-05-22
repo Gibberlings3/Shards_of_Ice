@@ -1,0 +1,23 @@
+@0    = ~Le prix de l'amitie~
+@1    = ~Certains de mes meilleurs amis sont des vases~
+@2    = ~Limon d'humeur~
+@3    = ~Kjobo Pansyflake~
+@4    = ~Heinonny~
+@5    = ~Figurine d'invocation de limon~
+@6    = ~Cette étrange figurine dont la surface est bizarrement gluante peut être utilisée pour invoquer le légendaire Limon d'Humeur. Contrairement à leurs cousins plus agressifs, les limons d'humeur sont pacifiques. Leurs qualités aphrodisiaques sont hautement recherchées. On dit qu'entrer en contact avec l'un d'entre eux provoque un intense plaisir.
+
+PARAMETRES :
+
+Invoque un limon d'humeur chaque jour. En invoquer plusieurs est fortement déconseillé, étant donné que la plupart des humanoïdes ne peuvent pas supporter le plaisir provoqué par plus d'un seul d'entre eux.~
+@7    = ~Restaurer la convocation de vache ? Mais pourquoi faire ?~
+@8    = ~Convocation de vache~
+@9    = ~Convocation de vache (Convocation)
+Niveau : 5
+Portée : champ de vision du lanceur
+Durée : Instantanée
+Temps d'incantation : 5
+Zone d'effet : 1 Créature
+Jet de sauvegarde : aucun
+
+Ce sort convoquera une créature bovine qui tombera du ciel sur la créature choisie. Malheureusement, ce sortilège ne peut pas être utilisé pour combattre la faim dans le monde. En effet, la créature convoquée disparaîtra aussitôt qu'elle aura touché le sol.~
+@10   = ~Les Babioles de Lucy~

@@ -1,0 +1,7 @@
+IF
+     Global("iceslimeitem","GLOBAL",0)
+THEN
+     RESPONSE #100
+           GiveItemCreate("iceslime","AR18MAGE",1,0,0)
+           SetGlobal("iceslimeitem","GLOBAL",1)
+END

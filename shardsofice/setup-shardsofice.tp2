@@ -1,0 +1,93 @@
+BACKUP ~shardsofice/backup~
+SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
+
+/* enable all error messages; nothing suppressed. comment this out for release version */
+// MODDER
+
+ALWAYS
+
+  ACTION_IF NOT VARIABLE_IS_SET cd_always THEN BEGIN
+
+    OUTER_SET cd_always = 1 // just do this once per install
+
+    // convert strings to UTF-8 for BGEE/BG2EE
+    ACTION_DEFINE_ARRAY cdreload BEGIN setup END
+    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~shardsofice/languages~ reload_array = cdreload END
+
+  END
+
+END
+
+/* WeiDU v204+ allows tp2 level version listing in the .log, so no more tra changes  */
+VERSION ~v7~
+
+/* launch the readme file immediately. If you want to disable the ReadMe, place two slashes before it, like //README  */
+README ~shardsofice/readme-shardsofice.html~
+
+AUTO_TRA ~shardsofice/languages/%s~
+LANGUAGE ~English~ ~english~ ~shardsofice/languages/english/setup.tra~
+LANGUAGE ~Russian (translation by Gingerrr, Badgert & aerie.ru)~ ~russian~ ~shardsofice/languages/english/setup.tra~
+                                                                           ~shardsofice/languages/russian/setup.tra~
+LANGUAGE ~French (translation by La Voix 2 la Sagesse of the d'Oghmatiques)~ ~french~ ~shardsofice/languages/english/setup.tra~
+                                                                                      ~shardsofice/languages/french/setup.tra~
+LANGUAGE ~Italian (translation by ilot)~ ~italian~ ~shardsofice/languages/english/setup.tra~
+                                                   ~shardsofice/languages/italian/setup.tra~
+LANGUAGE ~German (translation by Jarl and Leonardo Watson)~ ~german~ ~shardsofice/languages/english/setup.tra~
+                                                                     ~shardsofice/languages/german/setup.tra~
+
+BEGIN @0
+
+EXTEND_TOP ~AR2010.bcs~ ~shardsofice/icefriend/if2010.baf~
+// EXTEND_TOP ~AR2009.bcs~ ~shardsofice/icefriend/if2009.baf~
+
+COMPILE ~shardsofice/icefriend/ifdial.d~
+
+BEGIN @1
+
+COPY ~shardsofice/iceslime/icejel1.cre~ ~override/icejel1.cre~
+	SAY NAME1 @2
+	SAY NAME2 @2
+
+COPY ~shardsofice/iceslime/icejel2.cre~ ~override/icejel2.cre~
+	SAY NAME1 @2
+	SAY NAME2 @2
+
+COPY ~shardsofice/iceslime/kjobo.cre~ ~override/kjobo.cre~
+	SAY NAME1 @3
+	SAY NAME2 @3
+
+COPY_EXISTING ~ar18mage.cre~ ~override/ar18mage.cre~
+SAY NAME1 @4
+SAY NAME2 @4
+
+COPY ~shardsofice/iceslime/iceslime.itm~ ~override/iceslime.itm~
+	SAY NAME1 @5
+	SAY NAME2 @5
+	SAY DESC @6
+
+EXTEND_TOP ~ar2600.bcs~ ~shardsofice/iceslime/ice2600.baf~
+
+EXTEND_TOP ~ar1800.bcs~ ~shardsofice/iceslime/ice1800.baf~
+
+COMPILE ~shardsofice/iceslime/iceslime.d~
+
+BEGIN @7
+		   
+COPY ~shardsofice/moo/eff_m93.wav~  ~override/eff_m93.wav~   /* Summon Cow sound effect */
+     ~shardsofice/moo/u!scowa.bam~ ~override/u!scowa.bam~  /* Summon Cow scroll BAM */
+     ~shardsofice/moo/u!scowb.bam~ ~override/u!scowb.bam~  /* Summon Cow casting BAM */
+     ~shardsofice/moo/u!scowc.bam~ ~override/u!scowc.bam~  /* Summon Cow spellbook BAM */
+
+COPY ~shardsofice/moo/u!spel02.spl~ ~override/u!spel02.spl~  /* Summon Cow spell file */
+	SAY NAME1             @8
+	SAY UNIDENTIFIED_DESC @9
+
+COPY ~shardsofice/moo/u!scrl02.itm~ ~override/u!scrl02.itm~  /* Summon Cow scroll item file */
+	SAY NAME1 @8
+	SAY NAME2 @8
+	SAY DESC  @9
+
+COPY ~shardsofice/moo/u!lstore.sto~ ~override/u!lstore.sto~  /* Lucy's Knick Knacks */
+	SAY STORE_NAME @10
+
+COMPILE ~shardsofice/moo/u!lstore.d~  /* Lucy's altered dialog */

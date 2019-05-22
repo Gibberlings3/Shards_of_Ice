@@ -1,0 +1,7 @@
+IF
+  Global("SpawnImoenCell","GLOBAL",1)
+THEN
+  RESPONSE #100
+    CreateCreature("Imoen2",[201.417],11)
+    SetGlobal("SpawnImoenCell","GLOBAL",2)
+END

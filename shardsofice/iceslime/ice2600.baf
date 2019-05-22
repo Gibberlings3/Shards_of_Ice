@@ -1,0 +1,9 @@
+IF
+  Global("kjoboSpawn","GLOBAL",0)
+THEN
+  RESPONSE #100
+    SetGlobal("kjoboSpawn","GLOBAL",1)
+    CreateCreature("kjobo",[401.2785],5)
+    CreateCreature("icejel1",[444.2713],6)
+    CreateCreature("icejel2",[261.2887],6)
+END
