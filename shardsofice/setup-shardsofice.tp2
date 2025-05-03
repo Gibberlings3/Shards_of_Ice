@@ -12,7 +12,9 @@ ALWAYS
 
     // convert strings to UTF-8 for BGEE/BG2EE
     ACTION_DEFINE_ARRAY cdreload BEGIN setup END
-    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~shardsofice/languages~ reload_array = cdreload END
+	ACTION_DEFINE_ARRAY cdnoconvert BEGIN install END
+	
+    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~shardsofice/languages~ noconvert_array = cdnoconvert reload_array = cdreload END
 
   END
 
@@ -34,6 +36,8 @@ LANGUAGE ~Italian (translation by ilot)~ ~italian~ ~shardsofice/languages/englis
                                                    ~shardsofice/languages/italian/setup.tra~
 LANGUAGE ~German (translation by Jarl and Leonardo Watson)~ ~german~ ~shardsofice/languages/english/setup.tra~
                                                                      ~shardsofice/languages/german/setup.tra~
+
+LANGUAGE ~Simplified Chinese (translation by barkingdog)~ ~schinese~ ~shardsofice/languages/schinese/install.tra~
 
 BEGIN @0
 
