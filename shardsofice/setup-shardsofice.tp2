@@ -1,4 +1,4 @@
-BACKUP ~shardsofice/backup~
+BACKUP ~weidu_external/shardsofice/backup~
 SUPPORT ~https://www.gibberlings3.net/forums/forum/28-miscellaneous-released-mods/~
 
 /* enable all error messages; nothing suppressed. comment this out for release version */
@@ -9,12 +9,20 @@ ALWAYS
   ACTION_IF NOT VARIABLE_IS_SET cd_shards_always THEN BEGIN
 
     OUTER_SET cd_shards_always = 1 // just do this once per install
+    OUTER_SPRINT ~tra_location~ ~shardsofice/languages~
 
-    // convert strings to UTF-8 for BGEE/BG2EE
-    ACTION_DEFINE_ARRAY cdreload BEGIN game END
-    ACTION_DEFINE_ARRAY cdnoconvert BEGIN weidu END
-	
-    LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~shardsofice/languages~ noconvert_array = cdnoconvert reload_array = cdreload END
+    ACTION_IF GAME_IS ~bg2ee eet~ BEGIN // ee games
+
+      OUTER_SPRINT ~tra_location~ ~weidu_external/shardsofice/languages~
+
+      // convert strings to UTF-8 for BGEE/BG2EE
+      ACTION_DEFINE_ARRAY cdreload BEGIN game END
+      ACTION_DEFINE_ARRAY cdnoconvert BEGIN weidu END
+    
+      LAF HANDLE_CHARSETS INT_VAR infer_charsets = 1 STR_VAR tra_path = ~shardsofice/languages~ out_path = ~weidu_external/shardsofice/languages~
+        noconvert_array = cdnoconvert reload_array = cdreload END
+      
+    END
 
   END
 
@@ -26,7 +34,8 @@ VERSION ~v7~
 /* launch the readme file immediately. If you want to disable the ReadMe, place two slashes before it, like //README  */
 README ~shardsofice/readme-shardsofice.html~
 
-AUTO_TRA ~shardsofice/languages/%s~
+AUTO_TRA ~%tra_location%/%s~
+
 LANGUAGE ~English~ ~english~ 
   ~shardsofice/languages/english/game.tra~
   ~shardsofice/languages/english/weidu.tra~
