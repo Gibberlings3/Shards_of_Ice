@@ -29,7 +29,7 @@ ALWAYS
 END
 
 /* WeiDU v204+ allows tp2 level version listing in the .log, so no more tra changes  */
-VERSION ~v7~
+VERSION ~v8~
 
 /* launch the readme file immediately. If you want to disable the ReadMe, place two slashes before it, like //README  */
 README ~shardsofice/readme-shardsofice.html~
